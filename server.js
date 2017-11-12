@@ -39,7 +39,9 @@ app.route('/')
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
-app.get('/api/whoami')
+app.get('/api/whoami', function (req, res) {
+  res.type('JSON').send(who(req));
+});
 
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
