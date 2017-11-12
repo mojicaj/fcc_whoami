@@ -10,6 +10,8 @@ var express = require('express');
 var app = express();
 var who = require('./whoami.js');
 
+app.enable('trust proxy')
+
 if (!process.env.DISABLE_XORIGIN) {
   app.use(function(req, res, next) {
     var allowedOrigins = ['https://narrow-plane.gomix.me', 'https://www.freecodecamp.com'];
@@ -40,7 +42,7 @@ app.route('/')
     })
 
 app.get('/api/whoami', function (req, res) {
-  res.type('JSON').send(who(req));
+  res.type('json').send(who(req));
 });
 
 // Respond not found to all the wrong routes
