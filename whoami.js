@@ -3,7 +3,6 @@ var who = function (data) {
 }
 
 function getLang(lanHdr) {
-  console.log(lanHdr);
   var split = lanHdr.indexOf(',');
   return lanHdr.substring(0, split) || lanHdr;
 }

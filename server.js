@@ -41,7 +41,7 @@ app.route('/')
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
 
-app.get('/api/whoami', function (req, res) {
+app.get('/whoami', function (req, res) {
   res.type('json').send(who(req));
 });
 

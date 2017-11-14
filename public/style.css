@@ -26,10 +26,16 @@ ul {
 
 a {
 	color: #2574A9;
+  text-decoration: none;
 }
 /****** Logo Div Styling ******/
 
 img {
 	margin: 20px auto 0 auto;
 	display: block;
+}
+
+code {
+  background: white;
+  color: #c92427;
 }
